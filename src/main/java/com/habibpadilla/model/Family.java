@@ -17,6 +17,21 @@ public class Family {
 	
 	@Column(name="nombre", length = 50)
 	private String nombre;
+
+	@Column(name="apellido", length = 50)
+	private String apellido;
+	
+	@Column(name="correo", length = 50)
+	private String correo;
+	
+	@Column(name="tipopersona", length = 50)
+	private String tipopersona;
+	
+	public String toString()
+	{
+		String mensaje ="{Id:"+id+", Nombre:"+nombre+", Apellido:"+apellido+", Correo:"+correo+"},"; 
+		return mensaje;
+	}
 	
 	public int getId() {
 		return id;
@@ -58,13 +73,5 @@ public class Family {
 		this.tipopersona = tipopersona;
 	}
 
-	@Column(name="apellido", length = 50)
-	private String apellido;
-	
-	@Column(name="correo", length = 50)
-	private String correo;
-	
-	@Column(name="tipopersona", length = 50)
-	private String tipopersona;
 	
 }

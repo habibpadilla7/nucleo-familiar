@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.habibpadilla.model.Log;
 import com.habibpadilla.model.Family;
 import com.habibpadilla.repo.IFamilyRepo;
 
+@Service
 public class FamilyService {
 
 	@Autowired
@@ -100,7 +102,7 @@ public class FamilyService {
 
 	public boolean deleteFamily(Integer id) {
 		Log log=new Log();
-		log.setPath("/Familia/"+id);
+		log.setPath("/familia/"+id);
 		log.setMethod("DELETE");
 		log.setEntered("id:"+id);
 		try {
