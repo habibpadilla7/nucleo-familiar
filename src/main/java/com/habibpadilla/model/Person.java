@@ -14,7 +14,7 @@ public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(unique = true, nullable = false)
-	private int idPersona;
+	private int id;
 	@Column(name="nombre", length = 50)
 	private String nombre;
 	@Column(name="apellido", length = 50)
@@ -24,15 +24,15 @@ public class Person {
 	
 	public String toString()
 	{
-		String mensaje ="{Id:"+idPersona+", Nombre:"+nombre+", Apellido:"+apellido+", Correo:"+correo+"},"; 
+		String mensaje ="{Id:"+id+", Nombre:"+nombre+", Apellido:"+apellido+", Correo:"+correo+"},"; 
 		return mensaje;
 	}
 	
 	public int getIdPersona() {
-		return idPersona;
+		return id;
 	}
-	public void setIdPersona(int idPersona) {
-		this.idPersona = idPersona;
+	public void setIdPersona(int id) {
+		this.id = id;
 	}
 	public String getNombre() {
 		return nombre;

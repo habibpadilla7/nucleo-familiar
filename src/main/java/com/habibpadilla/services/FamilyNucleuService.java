@@ -22,7 +22,7 @@ public class FamilyNucleuService {
 	public List<FamilyNucleu> listFamilyNucleu(){
 		List<FamilyNucleu> lfamily=null;
 		Log log=new Log();
-		log.setPath("/familia");
+		log.setPath("/nucleo-familiar");
 		log.setEntered("");
 		log.setMethod("GET");
 		try {
@@ -45,7 +45,7 @@ public class FamilyNucleuService {
 	public Optional<FamilyNucleu> findByIdFamilyNucleu(Integer id){
 		Optional<FamilyNucleu> lfamily=null;
 		Log log=new Log();
-		log.setPath("/familia/"+id);
+		log.setPath("/nucleo-familiar/"+id);
 		log.setEntered("id:"+id);
 		log.setMethod("GET");
 		try {
@@ -65,7 +65,7 @@ public class FamilyNucleuService {
 		
 		FamilyNucleu lfamily=null;
 		Log log=new Log();
-		log.setPath("/familia");
+		log.setPath("/nucleo-familiar");
 		log.setMethod("POST");
 		log.setEntered(""+family.toString());
 		try {
@@ -85,7 +85,7 @@ public class FamilyNucleuService {
 		
 		FamilyNucleu lfamily=null;
 		Log log=new Log();
-		log.setPath("/familia");
+		log.setPath("/nucleo-familiar");
 		log.setMethod("PUT");
 		log.setEntered(""+family.toString());
 		try {
@@ -102,7 +102,7 @@ public class FamilyNucleuService {
 
 	public boolean deleteFamilyNucleu(Integer id) {
 		Log log=new Log();
-		log.setPath("/familia/"+id);
+		log.setPath("/nucleo-familiar/"+id);
 		log.setMethod("DELETE");
 		log.setEntered("id:"+id);
 		try {

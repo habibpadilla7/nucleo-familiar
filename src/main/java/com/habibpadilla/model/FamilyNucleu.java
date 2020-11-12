@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,11 +18,14 @@ public class FamilyNucleu {
 	@Column(unique = true, nullable = false)
 	private int id;
 	
-	@Column(name="idPerson", length = 10)
-	private int idPerson;
+	@ManyToOne
+	@JoinColumn(name="idPerson")
+	Person person;
 	
-	@Column(name="idFamily")
-	private int idFamily;
+	@ManyToOne
+	@JoinColumn(name="idFamily")
+	Family family;
+
 	
 	public int getId() {
 		return id;
@@ -30,21 +35,7 @@ public class FamilyNucleu {
 		this.id = id;
 	}
 
-	public int getIdPerson() {
-		return idPerson;
-	}
 
-	public void setIdPerson(int idPerson) {
-		this.idPerson = idPerson;
-	}
-
-	public int getIdFamily() {
-		return idFamily;
-	}
-
-	public void setIdFamily(int idFamily) {
-		this.idFamily = idFamily;
-	}
 
 	
 }
